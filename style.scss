@@ -2,16 +2,24 @@
 
 }
 
+
+.en-img-wrapper:hover > .en-img-magnifier-round, .en-img-magnifier-square {
+    opacity: 1;
+}
+
 .en-img-magnifier-round, .en-img-magnifier-square { // both magnifiers
-    outline: "1px dashed white";
+    border: 1px dashed rgb(209, 209, 209) !important;
+    box-shadow: 0px 0px 17px -1px rgba(0,0,0,0.75);
+    transition: opacity .1s linear;
+    opacity: 0;
 }
 
 .en-img-magnifier-square { // used for square magnifier option
-    
+    border-radius: 0%;
 }
 
 .en-img-magnifier-round { // used for circle magnifier option
-
+    border-radius: 50%;
 }
 
 .en-img-view { // the actual <img> class itself
@@ -20,4 +28,8 @@
 
 .en-img-magnifier-smooth { // used for smooth magnifier option
     transition: .05s linear;
+}
+
+.en-img-magnifier-pixel {
+    image-rendering: pixelated;
 }
