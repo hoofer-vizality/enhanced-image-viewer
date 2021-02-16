@@ -34,7 +34,7 @@ module.exports = class EnhancedImage extends React.PureComponent {
                     e.style.backgroundImage = `url(${this.props.src})`
                     e.style.backgroundSize  = `${this.props.width * 3}px ${this.props.height * 3}px`
                     console.log(e.style.backgroundSize);
-                }} className="en-img-magnifier-square" style={{outline: "2px dashed white",backgroundRepeat:"no-repeat",position:"fixed",width:"200px",height:"200px",zIndex:"5"}}/>
+                }} className="en-img-magnifier-square" style={{backgroundRepeat:"no-repeat",position:"fixed",width:"200px",height:"200px",zIndex:"5"}}/>
                 <img className="en-img-view" src={this.props.src} style={{width:this.props.width,height:this.props.height}}/>
             </div>
         </>
