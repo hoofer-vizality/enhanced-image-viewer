@@ -1,3 +1,4 @@
+# hi this isn't done, please don't use it unless you want unstable stuff. thanks. ok.
 
 ![Banner](https://github.com/hoofer-vizality/enhanced-image-viewer/blob/main/assets/banner.png?raw=true)
 <p align="center">
@@ -7,7 +8,7 @@
 </p>
 
 # Enhanced Image Viewer
-Adds useful utilities to quickly copy user mentions, role mentions, channel mentions, and voice channel links to your clipboard. 
+hi this isn't done, please don't use it unless you want unstable stuff. thanks. ok.
 
 ![Preview](https://github.com/hoofer-vizality/enhanced-image-viewer/blob/main/assets/example.gif?raw=true)
 
