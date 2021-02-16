@@ -25,16 +25,20 @@ module.exports = class EnhancedImage extends React.PureComponent {
                             var y = data.pageY - e.parentElement.getBoundingClientRect().top - window.pageYOffset;
                             x = Math.min(Math.max(x,0),width);
                             y = Math.min(Math.max(y,0),height);
-                            console.log(x,y)
                             e.style.left = `${x-100}px`;
                             e.style.top = `${y-100}px`;
                             e.style.backgroundPosition = `${-x*3+100}px ${-y*3+100}px`
+                            // not inside of image
+                            if (y <= 0 || data.pageY > e.parentElement.getBoundingClientRect().top+height || x <= 0 || data.pageX > e.parentElement.getBoundingClientRect().left+width){ 
+                                e.classList.add("en-img-hide")
+                            } else {
+                                e.classList.remove("en-img-hide")
+                            }
                         }
                         e.addEventListener("mousemove", move);
                         e.parentElement.addEventListener("mousemove", move);
                         e.style.backgroundImage = `url(${this.props.src})`
                         e.style.backgroundSize  = `${this.props.width * 3}px ${this.props.height * 3}px`
-                        console.log(e.style.backgroundSize);
                     }} className="en-img-magnifier-round" style={{backgroundRepeat:"no-repeat",position:"fixed",width:"200px",height:"200px",zIndex:"999"}}/>
                     <img className="en-img-view" src={this.props.src} style={{width:this.props.width,height:this.props.height}}/>
                 </div>

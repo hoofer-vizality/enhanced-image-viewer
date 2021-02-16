@@ -2,16 +2,14 @@
 
 }
 
-
-.en-img-wrapper:hover > .en-img-magnifier-round, .en-img-magnifier-square {
-    opacity: 1;
+.en-img-hide {
+    opacity: 0;
 }
 
 .en-img-magnifier-round, .en-img-magnifier-square { // both magnifiers
     border: 1px dashed rgb(209, 209, 209) !important;
     box-shadow: 0px 0px 17px -1px rgba(0,0,0,0.75);
     transition: opacity .1s linear;
-    opacity: 0;
 }
 
 .en-img-magnifier-square { // used for square magnifier option
