@@ -1,15 +1,19 @@
-.en-img-wrapper {
+.en-img-wrapper { // the <div> that holds the magnifier and en-img-view
 
 }
 
-.en-img-magnifier-square {
+.en-img-magnifier-square { // used for square magnifier option
+    
+}
+
+.en-img-magnifier-round { // used for circle magnifier option
 
 }
 
-.en-img-magnifier-round {
+.en-img-view { // the actual <img> class itself
 
 }
 
-.en-img-view {
-
+.en-img-magnifier-smooth { // used for smooth magnifier option
+    transition: .05s linear;
 }
