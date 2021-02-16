@@ -1,102 +1,15 @@
-.safe-url-link, 
-.unsafe-url-link, 
-.dangerous-url-link, 
-.http-url-link,
-.modified-url {
-    display: inline;
+.en-img-wrapper {
+
 }
 
-.flagged-link {
-    color: var(--link-color);
-    font-weight: bold;
+.en-img-magnifier-square {
+
 }
 
-.link-title-container::after {
-    content: var(--notice);
-    z-index: 1;
-    position: absolute;
-    pointer-events: none;
-    background: var(--background) var(--icon) 4px 3px/17px 17px no-repeat;
-    color: var(--inner-text);
-    font-size: 14px;
-    box-shadow: 0 2px 10px #000000;
-    border-radius: 5px;
-    border: var(--border);
-    padding: 0 5px 0 22px;
-    margin-left: 2px;
-    right: 10px;
-    top: 10px;
+.en-img-magnifier-round {
+
 }
 
-.safe-url-link {
-    --link-color: #43B581;
+.en-img-view {
 
-    .link-title-container::after {
-        --background: #43B581;
-        --inner-text: #fff;
-        --icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="white" width="18px" height="18px"><g><rect fill="none" height="24" width="24"/></g><g><path d="M23,12l-2.44-2.79l0.34-3.69l-3.61-0.82L15.4,1.5L12,2.96L8.6,1.5L6.71,4.69L3.1,5.5L3.44,9.2L1,12l2.44,2.79l-0.34,3.7 l3.61,0.82L8.6,22.5l3.4-1.47l3.4,1.46l1.89-3.19l3.61-0.82l-0.34-3.69L23,12z M10.09,16.72l-3.8-3.81l1.48-1.48l2.32,2.33 l5.85-5.87l1.48,1.48L10.09,16.72z"/></g></svg>');
-        --notice: "Safe";
-        --border: dashed 1px #fff;
-    }
-}
-
-.unsafe-url-link {
-    --link-color: #FAA61A;
-
-    .link-title-container::after {
-        --background: #FAA61A;
-        --inner-text: #fff;
-        --icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>');
-        --notice: "Unsafe";
-        --border: dashed 1px #fff;
-    }
-}
-
-.http-url-link {
-    --link-color: #FAA61A;
-
-    .link-title-container::after {
-        --background: #FAA61A;
-        --inner-text: #fff;
-        --icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>');
-        --notice: "Unsafe";
-        --border: dashed 1px #fff;
-    }
-}
-
-.dangerous-url-link {
-    --link-color: #F04747;
-
-    .link-title-container::after {
-        --background: #F04747;
-        --inner-text: #fff;
-        --icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M15.73 3H8.27L3 8.27v7.46L8.27 21h7.46L21 15.73V8.27L15.73 3zM12 17.3c-.72 0-1.3-.58-1.3-1.3 0-.72.58-1.3 1.3-1.3.72 0 1.3.58 1.3 1.3 0 .72-.58 1.3-1.3 1.3zm1-4.3h-2V7h2v6z"/></svg>');
-        --notice: "Dangerous";
-        --border: dashed 1px #fff;
-    }
-}
-
-#app-mount [class*="url-tooltip-content"] {
-    background-color: var(--tooltip);
-    border: dashed 1px #fff;
-    box-shadow: 0 2px 5px #000000;
-    margin-bottom: -5px;
-
-    .tooltipPointer-3ZfirK {
-        border-top: dashed 1px #fff;
-        border-top-color: var(--tooltip);
-    }
-}
-
-.safe-url-tooltip-content {
-    --tooltip: #43B581;
-}
-.unsafe-url-tooltip-content {
-    --tooltip: #FAA61A;
-}
-.http-url-tooltip-content {
-    --tooltip: #FAA61A;
-}
-.dangerous-url-tooltip-content {
-    --tooltip: #F04747;
 }
