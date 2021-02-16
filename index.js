@@ -23,9 +23,7 @@ export default class EnhancedImageViewer extends Plugin {
         patch("image-modal", ImageModal.default.prototype, "render", (args, res)=>{
             const image = res.props.children[0];
             const details = res.props.children[1];
-            console.log(res);
-            console.log(image.props);
-            res.props.children[0] = (<EnhancedImage width={image.props.maxWidth} height={image.props.maxHeight} src={image.props.src}/>);  
+            res.props.children[0] = (<EnhancedImage settings={this.settings} width={image.props.maxWidth} height={image.props.maxHeight} src={image.props.src}/>);  
             return res;
         })
 
