@@ -21,7 +21,7 @@ module.exports = class Settings extends React.PureComponent {
         }
         return <>
             <Category name="Image Preview" opened={this.state.preview_opened} onChange={()=> this.setState({ preview_opened: !this.state.preview_opened})}>
-                <EnhancedImage settings={settingSetup} width={843} height={249} src="https://cdn.discordapp.com/attachments/738968109288914976/811361409089798225/unknown.png"/>
+                <EnhancedImage settings={settingSetup} width={1200/2} height={675/2} src="https://cdn.discordapp.com/attachments/738968109288914976/811383816845131806/unknown.png"/>
             </Category>
             <Category name="Customization" opened={this.state.custom_opened} onChange={()=> this.setState({ custom_opened: !this.state.custom_opened})}>
 
@@ -38,7 +38,7 @@ module.exports = class Settings extends React.PureComponent {
                 onChange={()=> this.props.toggleSetting("hideLens", true)}
                 >Automatically Hide Lends</SwitchItem>
             <SwitchItem
-                note={"Makes movements more smooth feeling."}
+                note={"Makes movements have a more smooth feeling."}
                 value={this.props.getSetting("smoothLens", true)}
                 onChange={()=> this.props.toggleSetting("smoothLens", true)}
                 >Smoother Lens Movement</SwitchItem>
