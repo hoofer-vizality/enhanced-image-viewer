@@ -1,5 +1,11 @@
-.en-img-wrapper { // the <div> that holds the magnifier and en-img-view
+.downloadLink-1ywL9o {
+    position: relative;
+    margin-right: 5px;
+}
 
+.en-img-wrapper { // the <div> that holds the magnifier and en-img-view
+    transition: shut-up-warning-please-my-god;
+    z-index: 2;
 }
 
 .en-img-view { // the actual <img> class itself
@@ -14,6 +20,7 @@
 .en-img-magnifier-round, .en-img-magnifier-square { // both magnifiers
     transition: opacity .1s linear;
     cursor: none;
+    z-index: 3;
 }
 
 .en-img-magnifier-square { // used for square magnifier option
