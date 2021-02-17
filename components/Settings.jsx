@@ -87,6 +87,11 @@ module.exports = class Settings extends React.PureComponent {
                         onChange={()=> this.props.toggleSetting("antiAliasLens", false)}
                     >Anti Aliased Lens Preview</SwitchItem>
                 </Category>
+                <SwitchItem
+                        note={"Automatically darkens the image when using the lens."}
+                        value={this.props.getSetting("darkenImage", true)}
+                        onChange={()=> this.props.toggleSetting("darkenImage", true)}
+                >Darken Image When Magnifying</SwitchItem>
             </Category>
 
             
@@ -94,7 +99,7 @@ module.exports = class Settings extends React.PureComponent {
     }
 }
 
-/**                <SwitchItem
+/**        darkenImage        <SwitchItem
                 note={"Makes the notification toasts slimmer at the cost of hiding the interactive buttons."}
                 value={this.props.getSetting("slimToasts", true)}
                 onChange={()=> this.props.toggleSetting("slimToasts", true)}

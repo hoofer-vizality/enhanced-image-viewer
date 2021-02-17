@@ -46,8 +46,8 @@ module.exports = class EnhancedImage extends React.PureComponent {
         var y = data.pageY - this.magnifier.parentElement.getBoundingClientRect().top - window.pageYOffset;
         x = Math.min(Math.max(x,0),this.props.width);
         y = Math.min(Math.max(y,0),this.props.height);
-        this.magnifier.style.left = `${x-this.magnifierSize/2-3}px`;
-        this.magnifier.style.top = `${y-this.magnifierSize/2-3}px`;
+        this.magnifier.style.left = `${(x-this.magnifierSize/2)-3}px`;
+        this.magnifier.style.top = `${(y-this.magnifierSize/2)-3}px`;
         this.magnifier.style.backgroundPosition = `${-x*this.magnifierZoom+(this.magnifierSize/2)}px ${-y*this.magnifierZoom+(this.magnifierSize/2)}px`;
         // some checks to see if settings have changed
         this.settingsCheck();
@@ -55,10 +55,16 @@ module.exports = class EnhancedImage extends React.PureComponent {
         if (y <= 0 || data.pageY > this.magnifier.parentElement.getBoundingClientRect().top+this.props.height || x <= 0 || data.pageX > this.magnifier.parentElement.getBoundingClientRect().left+this.props.width){ 
             if (this.props.settings.get("hideLens", true)){
                 this.magnifier.classList.add("en-img-magnifier-hide")
+                this.magnifier.parentElement.getElementsByClassName("en-img-view")[0].style.filter = ""
+                
             }
         } else {
             this.magnifier.classList.remove("en-img-magnifier-hide")
+            if (this.props.settings.get("darkenImage", true)){
+                this.magnifier.parentElement.getElementsByClassName("en-img-view")[0].style.filter = "brightness(50%)"
+            }
         }
+       
         this.magnifier.style.backgroundSize  = `${this.props.width * this.magnifierZoom}px ${this.props.height * this.magnifierZoom}px`
     }
 
