@@ -66,7 +66,7 @@ module.exports = class EnhancedImage extends React.PureComponent {
                         e.parentElement.addEventListener("mousemove", move);
                         e.style.backgroundImage = `url(${this.props.src})`
                         e.style.backgroundSize  = `${this.props.width * 3}px ${this.props.height * 3}px`
-                    }} className="en-img-magnifier-round en-img-hide" style={{backgroundRepeat:"no-repeat",position:"fixed",width:"200px",height:"200px",zIndex:"999"}}/>
+                    }} className="en-img-magnifier-round en-img-magnifier-hide" style={{backgroundRepeat:"no-repeat",position:"fixed",width:"200px",height:"200px",zIndex:"999"}}/>
                     <img className="en-img-view" src={this.props.src} style={{width:this.props.width,height:this.props.height}}/>
                 </div>
             </div>

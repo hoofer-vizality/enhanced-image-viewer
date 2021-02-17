@@ -38,7 +38,7 @@ module.exports = class Settings extends React.PureComponent {
                 onChange={()=> this.props.toggleSetting("hideLens", true)}
                 >Automatically Hide Lends</SwitchItem>
             <SwitchItem
-                note={"Makes movements have a more smooth feeling."}
+                note={<Text><strong style={{color:"#f04747"}}>EXPERIMENTAL:</strong> Makes movements have a more smooth feeling.</Text>}
                 value={this.props.getSetting("smoothLens", true)}
                 onChange={()=> this.props.toggleSetting("smoothLens", true)}
                 >Smoother Lens Movement</SwitchItem>
