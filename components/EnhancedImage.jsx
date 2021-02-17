@@ -14,24 +14,24 @@ module.exports = class EnhancedImage extends React.PureComponent {
     }
 
     settingsCheck(){
-        if (this.settings.get("circleLens", true)){
+        if (this.props.settings.get("circleLens", true)){
             this.magnifier.classList.add("en-img-magnifier-round");
             this.magnifier.classList.remove("en-img-magnifier-square");
         } else {
             this.magnifier.classList.remove("en-img-magnifier-round");
             this.magnifier.classList.add("en-img-magnifier-square");
         }
-        if (this.settings.get("smoothLens", true)){
+        if (this.props.settings.get("smoothLens", true)){
             this.magnifier.classList.add("en-img-magnifier-smooth");
         } else {
             this.magnifier.classList.remove("en-img-magnifier-smooth");
         }
-        if (this.settings.get("antiAliasLens", false)){
+        if (this.props.settings.get("antiAliasLens", false)){
             this.magnifier.classList.remove("en-img-magnifier-pixel");
         } else {
             this.magnifier.classList.add("en-img-magnifier-pixel");
         }
-        if (this.settings.get("borderLens", true)){
+        if (this.props.settings.get("borderLens", true)){
             this.magnifier.classList.add("en-img-magnifier-border");
         } else {
             this.magnifier.classList.remove("en-img-magnifier-border");
