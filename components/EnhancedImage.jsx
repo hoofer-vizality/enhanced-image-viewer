@@ -33,8 +33,10 @@ module.exports = class EnhancedImage extends React.PureComponent {
         }
         if (this.props.settings.get("borderLens", true)){
             this.magnifier.classList.add("en-img-magnifier-border");
+            this.magnifier.style.border = `${this.props.settings.get("lensOutlineWidth", 1)}px ${this.props.settings.get("lensOutlineStyle", "solid")} #${this.props.settings.get("lensOutlineColor", "E91E63")}`
         } else {
             this.magnifier.classList.remove("en-img-magnifier-border");
+            this.magnifier.style.border = ``;
         }
     }
 
@@ -44,9 +46,8 @@ module.exports = class EnhancedImage extends React.PureComponent {
         var y = data.pageY - this.magnifier.parentElement.getBoundingClientRect().top - window.pageYOffset;
         x = Math.min(Math.max(x,0),this.props.width);
         y = Math.min(Math.max(y,0),this.props.height);
-        console.log(y);
-        this.magnifier.style.left = `${x-this.magnifierSize/2}px`;
-        this.magnifier.style.top = `${y-this.magnifierSize/2}px`;
+        this.magnifier.style.left = `${x-this.magnifierSize/2-3}px`;
+        this.magnifier.style.top = `${y-this.magnifierSize/2-3}px`;
         this.magnifier.style.backgroundPosition = `${-x*this.magnifierZoom+(this.magnifierSize/2)}px ${-y*this.magnifierZoom+(this.magnifierSize/2)}px`;
         // some checks to see if settings have changed
         this.settingsCheck();
@@ -65,7 +66,7 @@ module.exports = class EnhancedImage extends React.PureComponent {
         data.preventDefault();
         this.magnifierSize += 50 * Math.sign(data.deltaY) * -1;
         this.magnifierSize = Math.min(Math.max(this.magnifierSize, 50),500);
-        this.magnifierZoom = this.magnifierSize / 50;
+        this.magnifierZoom = 500 / this.magnifierSize;
         this.magnifier.style.width = `${this.magnifierSize}px`
         this.magnifier.style.height = `${this.magnifierSize}px`
         this.moveEvent(data);
