@@ -21,7 +21,7 @@ module.exports = class Settings extends React.PureComponent {
         }
         return <>
             <Category name="Image Preview" opened={this.state.preview_opened} onChange={()=> this.setState({ preview_opened: !this.state.preview_opened})}>
-                <EnhancedImage settings={settingSetup} width={1200/2} height={675/2} src="https://cdn.discordapp.com/attachments/738968109288914976/811383816845131806/unknown.png"/>
+                <EnhancedImage settings={settingSetup} width={1798/2} height={600/2} src="https://raw.githubusercontent.com/hoofer-vizality/enhanced-image-viewer/main/assets/banner.png"/>
             </Category>
             <Category name="Customization" opened={this.state.custom_opened} onChange={()=> this.setState({ custom_opened: !this.state.custom_opened})}>
 
