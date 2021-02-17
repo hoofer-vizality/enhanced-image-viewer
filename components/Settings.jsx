@@ -42,7 +42,18 @@ module.exports = class Settings extends React.PureComponent {
                 value={this.props.getSetting("smoothLens", true)}
                 onChange={()=> this.props.toggleSetting("smoothLens", true)}
                 >Smoother Lens Movement</SwitchItem>
+            <SwitchItem
+                note={"Makes the lens preview appear more smooth, or watery. This does not effect the image itself."}
+                value={this.props.getSetting("antiAliasLens", false)}
+                onChange={()=> this.props.toggleSetting("antiAliasLens", false)}
+                >Anti Aliased Lens Preview</SwitchItem>
+            <SwitchItem
+                note={"Adds a border and shadow to make the lens stand out."}
+                value={this.props.getSetting("borderLens", true)}
+                onChange={()=> this.props.toggleSetting("borderLens", true)}
+                >Lens Border & Shadow</SwitchItem>
             </Category>
+            
         </>
     }
 }

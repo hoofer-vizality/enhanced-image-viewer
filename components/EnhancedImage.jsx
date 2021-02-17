@@ -43,13 +43,23 @@ module.exports = class EnhancedImage extends React.PureComponent {
                             } else {
                                 e.classList.remove("en-img-magnifier-smooth");
                             }
+                            if (settings.get("antiAliasLens", false)){
+                                e.classList.remove("en-img-magnifier-pixel");
+                            } else {
+                                e.classList.add("en-img-magnifier-pixel");
+                            }
+                            if (settings.get("borderLens", true)){
+                                e.classList.add("en-img-magnifier-border");
+                            } else {
+                                e.classList.remove("en-img-magnifier-border");
+                            }
                             // not inside of image
                             if (y <= 0 || data.pageY > e.parentElement.getBoundingClientRect().top+height || x <= 0 || data.pageX > e.parentElement.getBoundingClientRect().left+width){ 
                                 if (settings.get("hideLens", true)){
-                                    e.classList.add("en-img-hide")
+                                    e.classList.add("en-img-magnifier-hide")
                                 }
                             } else {
-                                e.classList.remove("en-img-hide")
+                                e.classList.remove("en-img-magnifier-hide")
                             }
                         }
                         e.addEventListener("mousemove", move);
