@@ -24,18 +24,10 @@ export default class EnhancedImageViewer extends Plugin {
         patch("image-modal", ImageModal.default.prototype, "render", (args, res)=>{
             const image = res.props.children[0];
             const details = res.props.children[1];
-            res.props.children[0] = (<EnhancedImage settings={this.settings} width={image.props.maxWidth} height={image.props.maxHeight} src={image.props.src}/>);  
-            res.props.children.push(<a
-            href=""
-            className="downloadLink-1ywL9o"
-            target="_blank"
-            role="button"
-            onClick={(e)=>{
-                e.preventDefault();
-                transitionTo("/channels/738968108827541524/738968109288914976/811740824501092353");
-            }}
-            >| Open Settings</a>
-            )
+            res.props.children = [
+                <EnhancedImage settings={this.settings} width={image.props.maxWidth} height={image.props.maxHeight} src={image.props.src}/>,
+
+            ]
             return res;
         })
 

@@ -22,3 +22,14 @@ git clone https://github.com/hoofer-vizality/enhanced-image-viewer
 
 # Issues / Concerns
 Have an issue? Please make a request using our issue format which can be found [here](https://github.com/hoofer-vizality/enhanced-image-viewer/issues/new?template=ISSUE_TEMPLATE.md), thanks!
+
+# Credits
+JS Coding done by the wizard person, [@Hoofer](https://github.com/HooferDevelops)!
+
+Close image modal snippet from [@Strencher](https://github.com/Strencher)
+
+Misc coding help from [@dperolio](https://github.com/dperolio)
+
+Ideas and concepts from [@LuckFire](https://github.com/LuckFire), [@WinstonSepruko](https://github.com/WinstonSepruko), and [@Snapper](https://github.com/Snapper)
+
+Some ideas taken from [Better Image Viewer](https://github.com/1Lighty/BetterDiscordPlugins/tree/master/Plugins/BetterImageViewer), which is in no way affiliated with them.
