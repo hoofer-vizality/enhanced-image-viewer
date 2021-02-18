@@ -1,5 +1,5 @@
 import { React, getModule, getModuleByDisplayName, contextMenu } from "@vizality/webpack"
-import { Modal, Icon, Button, SearchBar, Anchor, Divider, Text, Avatar, ColorPicker } from "@vizality/components"
+import { Modal, Icon, Button, SearchBar, Anchor, Divider, Text, Avatar, ColorPicker, KeyboardShortcut } from "@vizality/components"
 import { FormItem, TextInput, SwitchItem, ButtonItem, RadioGroup, Category, SliderInput, ColorPickerInput } from '@vizality/components/settings';
 
 const EnhancedImage = require("./EnhancedImage")
@@ -64,13 +64,28 @@ module.exports = class Settings extends React.PureComponent {
                         value={this.props.getSetting("borderLens", true)}
                         onChange={()=> this.props.toggleSetting("borderLens", true)}
                     >Lens Border & Shadow</SwitchItem>
-                </Category>
-                <Category name="Lens Settings" opened={this.state.zoom_opened} onChange={()=> this.setState({ zoom_opened: !this.state.zoom_opened})}>
                     <SwitchItem
                         note={"Turns your zoom lens into a circle rather than a square."}
                         value={this.props.getSetting("circleLens", true)}
                         onChange={()=> this.props.toggleSetting("circleLens", true)}
                     >Round Lens</SwitchItem>
+                </Category>
+                <Category name="Lens Settings" opened={this.state.zoom_opened} onChange={()=> this.setState({ zoom_opened: !this.state.zoom_opened})}>
+                    <SliderInput
+                        minValue={1}
+                        maxValue={10}
+                        stickToMarkers
+                        markers={[50,100,150,200,250,300,350,400,450,500]}
+                        initialValue={this.props.getSetting("lensInitialSize", 150)}
+                        onValueChange={(v)=> this.props.updateSetting("lensInitialSize", v)}
+                        note="The initial size that the lens starts out with."
+                        onMarkerRender={(v)=>{return `${v}px`}}
+                    >Initial Lens Size</SliderInput>
+                    <SwitchItem
+                        note={"Inverts the ctrl + scroll and scroll binds."}
+                        value={this.props.getSetting("invertLensControls", false)}
+                        onChange={()=> this.props.toggleSetting("invertLensControls", false)}
+                    >Invert Controls</SwitchItem>
                     <SwitchItem
                         note={"Hides your lens when you are out of the image bounds."}
                         value={this.props.getSetting("hideLens", true)}
