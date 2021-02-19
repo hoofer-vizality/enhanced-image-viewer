@@ -9,7 +9,7 @@
 }
 
 .en-img-view { // the actual <img> class itself
-    transition: .2s linear;
+    transition: filter .2s linear;
 }
 
 .en-img-magnifier-hide { // when magnifier is hidden
@@ -32,7 +32,7 @@
 }
 
 .en-img-magnifier-smooth { // used for smooth magnifier option
-    transition: .05s linear;
+    transition: all 0.025s linear;
 }
 
 .en-img-magnifier-pixel { // used for anti-aliasing magnifier option
