@@ -32,4 +32,4 @@ Helpful misc coding help from [@dperolio](https://github.com/dperolio) ♪(^∇\
 
 Amazing Ideas and concepts from [@LuckFire](https://github.com/LuckFire), [@WinstonSepruko](https://github.com/WinstonSepruko), and [@Snapper](https://github.com/Snapper) ( •̀ ω •́ )✧ \\(@^0\^@)/ ヽ(✿ﾟ▽ﾟ)ノ
 
-Some concepts were taken from [Better Image Viewer](https://github.com/1Lighty/BetterDiscordPlugins/tree/master/Plugins/BetterImageViewer), which is in no way affiliated with them. ◑﹏◐
+A few concepts were from [Better Image Viewer](https://github.com/1Lighty/BetterDiscordPlugins/tree/master/Plugins/BetterImageViewer) which in no way is Enhanced Image Viewer affiliated with them. ◑﹏◐
