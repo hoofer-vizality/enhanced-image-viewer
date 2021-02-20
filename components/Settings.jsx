@@ -10,7 +10,9 @@ module.exports = class Settings extends React.PureComponent {
         this.state = {
             preview_opened: true,
             custom_lens_opened: false,
-            settings_lens_opened: false
+            settings_lens_opened: false,
+            custom_image_opened: false,
+            settings_image_opened: false
         }
     }
 
@@ -96,28 +98,30 @@ module.exports = class Settings extends React.PureComponent {
                 >Smoother Lens Movement</SwitchItem>
                 <SwitchItem
                     note={"Makes the lens preview appear more smooth, or watery. This does not effect the image itself."}
-                    value={this.props.getSetting("antiAliasLens", false)}
-                    onChange={()=> this.props.toggleSetting("antiAliasLens", false)}
+                    value={this.props.getSetting("antiAliasLens", true)}
+                    onChange={()=> this.props.toggleSetting("antiAliasLens", true)}
                 >Anti Aliased Lens Preview</SwitchItem>
             </Category>
-            <RadioGroup
-                options={[
-                    {name: "Never Active", desc: "Fully disables the lens.", value: "never"},
-                    {name: "Always Active", desc: "Automatically enables the lens when hovering over the image.", value: "always"},
-                    {name: "Click Toggle", desc: "Enables the lens when clicking on an image.", value: "click"},
-                    {name: "Hold Toggle", desc: "Enables the lens while the mouse is down on the image.", value: "hold"},
-                ]}
-                value={this.props.getSetting("lensToggleMode", "click")}
-                onChange={(v)=> this.props.updateSetting("lensToggleMode", v.value)}
-                note={"The toggle mode for the image lens."}
-            >Lens Toggle Mode</RadioGroup>
-            <SwitchItem
-                    note={"Automatically darkens the image when using the lens."}
-                    value={this.props.getSetting("darkenImage", true)}
-                    onChange={()=> this.props.toggleSetting("darkenImage", true)}
-            >Darken Image When Magnifying</SwitchItem>
-
-            
+            <Category name="Image Customization" opened={this.state.custom_image_opened} onChange={()=> this.setState({ custom_image_opened: !this.state.custom_image_opened})}>
+                <SwitchItem
+                        note={"Automatically darkens the image when using the lens."}
+                        value={this.props.getSetting("darkenImage", true)}
+                        onChange={()=> this.props.toggleSetting("darkenImage", true)}
+                >Darken Image When Magnifying</SwitchItem>
+            </Category>
+            <Category name="Image Settings" opened={this.state.settings_image_opened} onChange={()=> this.setState({ settings_image_opened: !this.state.settings_image_opened})}>
+                <RadioGroup
+                    options={[
+                        {name: "Never Active", desc: "Fully disables the lens.", value: "never"},
+                        {name: "Always Active", desc: "Automatically enables the lens when hovering over the image.", value: "always"},
+                        {name: "Click Toggle", desc: "Enables the lens when clicking on an image.", value: "click"},
+                        {name: "Hold Toggle", desc: "Enables the lens while the mouse is down on the image.", value: "hold"},
+                    ]}
+                    value={this.props.getSetting("lensToggleMode", "click")}
+                    onChange={(v)=> this.props.updateSetting("lensToggleMode", v.value)}
+                    note={"The toggle mode for the image lens."}
+                >Lens Toggle Mode</RadioGroup>
+            </Category>
         </>
     }
 }
