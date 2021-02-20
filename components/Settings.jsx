@@ -102,6 +102,17 @@ module.exports = class Settings extends React.PureComponent {
                         onChange={()=> this.props.toggleSetting("antiAliasLens", false)}
                     >Anti Aliased Lens Preview</SwitchItem>
                 </Category>
+                <RadioGroup
+                    options={[
+                        {color: "#7289da", name: "Never Active", desc: "Fully disables the lens.", value: "never"},
+                        {color: "#7289da", name: "Always Active", desc: "Automatically enables the lens when hovering over the image.", value: "always"},
+                        {color: "#7289da", name: "Click Toggle", desc: "Enables the lens when clicking on an image.", value: "click"},
+                        {color: "#7289da", name: "Hold Toggle", desc: "Enables the lens while the mouse is down on the image.", value: "hold"},
+                    ]}
+                    value={this.props.getSetting("lensToggleMode", "click")}
+                    onChange={(v)=> this.props.updateSetting("lensToggleMode", v.value)}
+                    note={"The toggle mode for the image lens."}
+                >Lens Toggle Mode</RadioGroup>
                 <SwitchItem
                         note={"Automatically darkens the image when using the lens."}
                         value={this.props.getSetting("darkenImage", true)}
