@@ -106,7 +106,7 @@ module.exports = class EnhancedImage extends React.PureComponent {
     render() {
         return <>
             <div style={{transform:"scale(1)"}}> 
-                <div style={{width:this.props.width,height:this.props.height}} className={`en-img-wrapper ${getModule("imageWrapper").imageWrapper} ${getModule(h=>h.modal && h.image && !h.content && !h.information)}}`}>
+                <div style={{width:this.props.width,height:this.props.height}} className={`en-img-wrapper ${getModule("imageWrapper").imageWrapper} ${getModule(h=>h.modal && h.image && !h.content && !h.information).image}`}>
                     <div 
                         ref={(e)=>{
                             if (!e || this.hooked)
