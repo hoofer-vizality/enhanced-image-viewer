@@ -1,5 +1,7 @@
 # hi this isn't done, please don't use it unless you want unstable stuff. thanks. ok.
 
+# this is pretty much over and done with, i don't have access to Vizality anymore which means i cannot develop this anymore, it was really bad anyways, i'm still learning :)
+
 ![Banner](https://github.com/hoofer-vizality/enhanced-image-viewer/blob/main/assets/banner.png?raw=true)
 <p align="center">
   <a href="#"><img align="center" alt="GitHub repo size" src="https://img.shields.io/github/repo-size/hoofer-vizality/enhanced-image-viewer?color=F68080&style=for-the-badge&logo=github">
@@ -26,10 +28,10 @@ Have an issue? Please make a request using our issue format which can be found [
 # Credits
 JS Coding done by the wizard person, [@Hoofer](https://github.com/HooferDevelops)!
 
-Close image modal js snippet from [@Strencher](https://github.com/Strencher) \(\*\^▽^\*\)
+Close image modal js snippet from [@Strencher](https://github.com/Strencher) \(\*\^▽^\*\) (o゜▽゜)o☆
 
-Helpful misc coding help from [@dperolio](https://github.com/dperolio) ♪(^∇\^*)
+Helpful misc coding help from [@dperolio](https://github.com/dperolio) ♪(^∇\^*) (☆▽☆)
 
-Amazing Ideas and concepts from [@LuckFire](https://github.com/LuckFire), [@WinstonSepruko](https://github.com/WinstonSepruko), and [@Snapper](https://github.com/Snapper) ( •̀ ω •́ )✧ \\(@^0\^@)/ ヽ(✿ﾟ▽ﾟ)ノ
+Amazing Ideas and concepts from [@LuckFire](https://github.com/LuckFire), [@WinstonSepruko](https://github.com/WinstonSepruko), and [@Snapper](https://github.com/Snapper) ( •̀ ω •́ )✧ \\(@^0\^@)/ ヽ(✿ﾟ▽ﾟ)ノ (\*^_^\*) (✿◡‿◡) (●ˇ∀ˇ●)
 
-A few concepts were from [Better Image Viewer](https://github.com/1Lighty/BetterDiscordPlugins/tree/master/Plugins/BetterImageViewer) which in no way is Enhanced Image Viewer affiliated with them. ◑﹏◐
+A few concepts were from [Better Image Viewer](https://github.com/1Lighty/BetterDiscordPlugins/tree/master/Plugins/BetterImageViewer) which in no way is Enhanced Image Viewer affiliated with them. ◑﹏◐ 
